@@ -67,3 +67,15 @@ If you're looking for inspiration of changes to make, consider:
 There's always more to learn and do. **You don't need to do all of these to demonstrate your ability.** This list is a suggestion of ideas. You're welcome to do something else.
 
 Be kind to yourself, and enjoy the challenge. :heart:
+
+Azure Devops Pipeline
+How to Run Azure Devops Pipelines
+
+Sign in to your Azure DevOps organization and go to your project.devops-challenge-dotnet
+https://dev.azure.com/anuruddhachallenge ( For now this is an public pipeline)
+
+Navigate to Pipelines-->Pipelines
+Select devops-challenge-dotnet pipeline
+This pipeline will build your image and directly deploy it to given AKS cluster.
+
+PS: Also, it will automatically trigger a deployment after the code change. But. Delply after the approval
