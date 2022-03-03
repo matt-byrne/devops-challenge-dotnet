@@ -1,0 +1,15 @@
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\bin\Debug\net5.0\DevOpsChallenge.SalesApi.Database.deps.json
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\bin\Debug\net5.0\DevOpsChallenge.SalesApi.Database.runtimeconfig.json
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\bin\Debug\net5.0\DevOpsChallenge.SalesApi.Database.runtimeconfig.dev.json
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\bin\Debug\net5.0\DevOpsChallenge.SalesApi.Database.dll
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\bin\Debug\net5.0\DevOpsChallenge.SalesApi.Database.pdb
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\DevOpsChallenge.SalesApi.Database.csproj.AssemblyReference.cache
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\DevOpsChallenge.SalesApi.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\DevOpsChallenge.SalesApi.Database.AssemblyInfoInputs.cache
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\DevOpsChallenge.SalesApi.Database.AssemblyInfo.cs
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\DevOpsChallenge.SalesApi.Database.csproj.CoreCompileInputs.cache
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\DevOpsChallenge.SalesApi.Database.dll
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\refint\DevOpsChallenge.SalesApi.Database.dll
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\DevOpsChallenge.SalesApi.Database.pdb
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\DevOpsChallenge.SalesApi.Database.genruntimeconfig.cache
+C:\GitLocal\devops-challenge-dotnet\src\DevOpsChallenge.SalesApi.Database\obj\Debug\net5.0\ref\DevOpsChallenge.SalesApi.Database.dll
