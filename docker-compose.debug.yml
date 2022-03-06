@@ -1,0 +1,16 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  devopschallengesalesapidatabase:
+    image: devopschallengesalesapidatabase
+    build:
+      context: .
+      dockerfile: src/DevOpsChallenge.SalesApi.Database/Dockerfile
+    ports:
+      - 1433:1433
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:c:\remote_debugger:rw

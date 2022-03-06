@@ -1,6 +1,17 @@
+parameters:
+  - name: dockerFilePath
+    type: string
+
+  - name: containerRegistry
+    type: string
+
+  - name: repository
+    type: string
+    
 steps:
-  - task: Docker@2
-    displayName: buildAndPush
-    inputs:
-      containerRegistry: "$(Azure Container Registry Name)"
-      repository: $(repositoty Name)
+- task: Docker@2
+  displayName: buildAndPush
+  inputs:
+    containerRegistry: $(containerRegistry)
+    repository: $(repository)
+    Dockerfile: $(dockerFilePath)

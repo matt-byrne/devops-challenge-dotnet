@@ -52,8 +52,16 @@ stages:
                 buildPlatform: $(buildPlatform)
                 GithubPackageRegistryToken: $(GithubPackageRegistryToken)
 
-- task: Docker@2
-  displayName: buildAndPush
-  inputs:
-    containerRegistry: 'test-acr'
-    repository: test
+  - stage: DockerBuildPublishApi
+    dependsOn: ['Build','CodeQLAnalysis']
+    jobs:
+      - job: "DockerBuildPublish"
+        pool:
+          name: "Azure Pipelines"
+          vmImage: "windows-latest"
+          steps:
+            - template: "templates/dockerImage.yaml"
+              parameters:
+                buildConfiguration: $(buildConfiguration)
+                buildPlatform: $(buildPlatform)
+                GithubPackageRegistryToken: $(GithubPackageRegistryToken)
