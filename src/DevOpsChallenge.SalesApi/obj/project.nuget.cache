@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "c7e1EawMZTSrC+2iQYdIntoKsSL4NZg/dWsRk5mWvddlBl1qdPpBqEa5RByI/3dPFCofI/Ssv4FkwL2hVv5F6Q==",
+  "dgSpecHash": "KXpRvYcH+uqTzGcE7Hslf/6AiGKXP6kcxv/DeJNi/q4AxUn5WBQCNJRvdaKpLbmplGFoSr9h9ZZjV7v7Cyz1qg==",
   "success": true,
   "projectFilePath": "C:\\GitLocal\\devops-challenge-dotnet\\src\\DevOpsChallenge.SalesApi\\DevOpsChallenge.SalesApi.csproj",
   "expectedPackageFiles": [
@@ -36,10 +36,10 @@
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
-    "C:\\Users\\brata.ganguly\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "C:\\Users\\brata.ganguly\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "C:\\Users\\brata.ganguly\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\brata.ganguly\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\brata.ganguly\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\brata.ganguly\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\brata.ganguly\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\brata.ganguly\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
