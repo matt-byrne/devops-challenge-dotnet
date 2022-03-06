@@ -1,0 +1,59 @@
+name: $(Date:yyyyMMdd).$(Rev:r)
+
+# Pipeline is run on commits, tags PRs and master and dev branch
+trigger:
+  tags:
+    include:
+      - "*"
+  branches:
+    include:
+      - main
+      - development
+# Run pipeline whenever a PR is raised
+pr:
+  branches:
+    include:
+      - "*"
+
+  paths:
+    exclude:
+      - .github
+      - .vscode
+      - ReadME.md
+
+stages:
+  - stage: Build
+    variables:
+      NUGET_PACKAGES: $(Pipeline.Workspace)/.nuget/packages
+    jobs:
+      - job: "Build"
+        pool:
+          vmImage: "windows-latest"
+        steps:
+          - template: "templates/build.yaml"
+
+  - stage: CodeQLAnalysis
+    variables:
+      - group: DevOps.CodeQL.Analysis
+    dependsOn: []
+    jobs:
+      - job: "CodeQLAnalysis"
+        pool:
+          name: "Azure Pipelines"
+          vmImage: "windows-latest"
+          demands:
+            - msbuild
+            - visualstudio
+            - vstest
+          steps:
+            - template: "templates/codeql.yaml"
+              parameters:
+                buildConfiguration: $(buildConfiguration)
+                buildPlatform: $(buildPlatform)
+                GithubPackageRegistryToken: $(GithubPackageRegistryToken)
+
+- task: Docker@2
+  displayName: buildAndPush
+  inputs:
+    containerRegistry: 'test-acr'
+    repository: test

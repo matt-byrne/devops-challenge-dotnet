@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AzUAeLGR3v+YGUWRCAcmHUhyVCMQ9zgMRr1xTmcoF0nY7tIYTBLJU/34g/Y+5XYbwnD0DgHOGg/pYIreSWaWKw==",
+  "dgSpecHash": "XA0UEGlD0+wYDA+DYBBl35RGpQdvuKYd2Obn/4nqYqS8tdxqHqY2+i06CLEwVQ3+QY/Dl6bV4XYwvq4i9b+J+Q==",
   "success": true,
-  "projectFilePath": "C:\\GitLocal\\devops-challenge-dotnet\\src\\DevOpsChallenge.SalesApi.Database\\DevOpsChallenge.SalesApi.Database.csproj",
+  "projectFilePath": "C:\\GitLocal\\devops-challenge-dotnet\\SRC\\DevOpsChallenge.SalesApi.Database\\DevOpsChallenge.SalesApi.Database.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

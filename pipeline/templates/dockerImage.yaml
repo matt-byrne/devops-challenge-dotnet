@@ -1,0 +1,6 @@
+steps:
+  - task: Docker@2
+    displayName: buildAndPush
+    inputs:
+      containerRegistry: "$(Azure Container Registry Name)"
+      repository: $(repositoty Name)

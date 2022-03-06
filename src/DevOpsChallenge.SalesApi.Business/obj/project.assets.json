@@ -5751,11 +5751,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitLocal\\devops-challenge-dotnet\\src\\DevOpsChallenge.SalesApi.Business\\DevOpsChallenge.SalesApi.Business.csproj",
+      "projectUniqueName": "C:\\GitLocal\\devops-challenge-dotnet\\SRC\\DevOpsChallenge.SalesApi.Business\\DevOpsChallenge.SalesApi.Business.csproj",
       "projectName": "DevOpsChallenge.SalesApi.Business",
-      "projectPath": "C:\\GitLocal\\devops-challenge-dotnet\\src\\DevOpsChallenge.SalesApi.Business\\DevOpsChallenge.SalesApi.Business.csproj",
+      "projectPath": "C:\\GitLocal\\devops-challenge-dotnet\\SRC\\DevOpsChallenge.SalesApi.Business\\DevOpsChallenge.SalesApi.Business.csproj",
       "packagesPath": "C:\\Users\\brata.ganguly\\.nuget\\packages\\",
-      "outputPath": "C:\\GitLocal\\devops-challenge-dotnet\\src\\DevOpsChallenge.SalesApi.Business\\obj\\",
+      "outputPath": "C:\\GitLocal\\devops-challenge-dotnet\\SRC\\DevOpsChallenge.SalesApi.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\brata.ganguly\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5772,8 +5772,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\GitLocal\\devops-challenge-dotnet\\src\\DevOpsChallenge.SalesApi.Database\\DevOpsChallenge.SalesApi.Database.csproj": {
-              "projectPath": "C:\\GitLocal\\devops-challenge-dotnet\\src\\DevOpsChallenge.SalesApi.Database\\DevOpsChallenge.SalesApi.Database.csproj"
+            "C:\\GitLocal\\devops-challenge-dotnet\\SRC\\DevOpsChallenge.SalesApi.Database\\DevOpsChallenge.SalesApi.Database.csproj": {
+              "projectPath": "C:\\GitLocal\\devops-challenge-dotnet\\SRC\\DevOpsChallenge.SalesApi.Database\\DevOpsChallenge.SalesApi.Database.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5wh+dccQginrqqL9ByCxptASNd9i1uAmuDh5WTIw70M3sAv8VNvH8M1UQyLeBmUkO43JYuzwk6hPWlybX4DReg==",
+  "dgSpecHash": "XpFIQpskuW9e+41e2IsaiuRG6DcUXVoeaGaad9GJxH780sulEA+D+IIKmvKJMraCDdO2S+Ia2mkxFlSP8gqysA==",
   "success": true,
-  "projectFilePath": "C:\\GitLocal\\devops-challenge-dotnet\\src\\DevOpsChallenge.SalesApi.Business\\DevOpsChallenge.SalesApi.Business.csproj",
+  "projectFilePath": "C:\\GitLocal\\devops-challenge-dotnet\\SRC\\DevOpsChallenge.SalesApi.Business\\DevOpsChallenge.SalesApi.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\ensure.that\\9.2.0\\ensure.that.9.2.0.nupkg.sha512",
     "C:\\Users\\brata.ganguly\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
