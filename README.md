@@ -2,68 +2,46 @@
 
 ## Introduction :wave:
 
-This challenge utilises the broad range of skills required by a DevOps Engineer. It focuses on DevOps for a .NET 5 application.
+This Sales Api has two main endpoints to push the sales data and get the report.
 
-In completing the challenge, you're welcome to change all aspects of the initial repository, including:
-* Directory and file structure.
-* Solution and project names.
-* Namespaces and class names.
-* Code, data, and settings files.
-* NuGet packages and dependencies.
-* This README!
+### Folder Structure:
 
-The solution should represent best practices, even if the starting solution is lacking them.
+This follows the standard microsevice folder structure. 
 
-You'll need .NET 5 and SQL Server Local DB to build and run the application locally. On a Mac or Linux device, you can update the connection string (in `appsettings.Development.json` and `DatabaseContextDesignTimeFactory.cs`) and use Docker to launch SQL Server Developer Edition.
+* src contains all the source code
+* tests contains all the unit test projects corresponsing to the source code projects
+* pipeline contains all the build and deployment templates and scripts.
+* .gitignore is designed such a way to manage the public files properly.
+* docker compose file to build and push the multi container image.
 
-## Scenario :blue_book:
+### Pipeline Setup:
 
-You're a DevOps Engineer working in a small team to launch a new application. The management team will use the new application to view and report on daily sales data.
+Pipeline is setup as muti stage pipeline which compirses of all the best parctice tooling such as build process, unit test execution, code coverage check and publish test execution report. It is also integrated with GitHub Advance Security to run security checks for the codebase. And when all those are passed it builds and publishes the Azure Container Image. It is based on Azure DevOps Multistage yaml pipeline.
 
-The development team have built a new API to ingest sales data from an existing system and provide endpoints for viewing and reporting the data. A future application will provide a user interface.
+Build step comprises of the below steps:
 
-*Note: For simplicity of the solution, the API does not require authentication. Don't do this in a real application!*
+* Check for cached Nuget Package: If the restorable nuget packages are cached , it skip the Nuget Restore step to gain some speed in the build process.
 
-## Challenge :question:
+* Restore Nuget Packages: If the restorable packages are not found in Cache, it will restore the packages with the details from Nuget.Config
 
-You should:
+* Building the Solution: Usual dotnet build for all the projects
 
-1. Introduce best practices into the solution to ensure a high-quality deliverable and a great developer experience.
+* Execution Unit Tests: As per the inductry standard 75 - 80 % code needs to be covered with unit test scenarios. During this step all the test case in the test projects are executed and at the end it checks whether it is passing the 75 - 80 % test coverage criteria. If not it will fail the step.
 
-2. Build and package the application as a container in a CI/CD pipeline ready for deployment
+* Generate Test Report: Install and configure the test report generator to produce the report for the executed test scenarios.
 
-You'll need to select a CI/CD tool to complete the challenge. Feel free to use your preferred platform, such as GitHub Actions, Azure Pipelines, Circle CI, or Travis CI.
+* Publish Test Report: Test report is published as artifacts to retrieve and later compare historical and future test data.
 
-*Note: This challenge does NOT require infrastructure provisioning or deployment. This challenge has designed to be possible without incurring any licencing, hosting or tooling costs.*
+* Publish symbols to the Azure DevOps Artifacts / any sysmbol server: Publish the pdb files to symbol server for future issue debugging.
 
-## Opportunities (optional) :zap:
+* Publish Infra Scripts: Publish the infra scripts as artifact to use during deployment stage.
 
-You've received feedback on the application from members of the project team. Optionally, fix these issues, or provide instructions back to the developer on the next steps to take:
+As part of the tighting the Security, GitHub Advanced Security steps are alse added in pipeline which runs parallel to the build steps, to reduce the overall execution time. It detects and prevent of adding any security risks in the code and eliminate the current threats.
 
-1. The front end developer consuming the Sales API has mentioned the Swagger UI interface doesn't contain descriptions of operations, parameters, or responses. The Swagger UI interface should display the code comments written by the API developer.
+### Docker and image setup:
 
-2. The security team have identified the application is revealing the technology used by sending the response header `Server: Kestrel`. This header should not be present in responses sent by the server.
+As this apllication requires mutiple containers to run at the sametime, we are using the docker compose tasks in Azure DevOps. We are here using Azure Container Registry to store and deploy images. As the SQL also need to be containerized, the migration sripts need to run before initializing the actual app code.
 
-3. The database administrator has identified poor query performance when a sale record is retrieved using its transaction ID. They have recommended creating an index.
+For the developers, as swagger definations are enabled they can add/update any new route, which will be visibile automatically. AS CI is enabled for this, they can push their code before merging to default branch. 
 
-## Effort :clock5:
-
-Spend as much or as little time as you like on this challenge. DevOps Engineers wear many hats :crown:, and there's always more opportunity for change and improvement. **Limit yourself to the time you have. Make the changes that deliver the most value.**
-
-If you're looking for inspiration of changes to make, consider:
-
-* Getting started documentation for a new developer.
-* Configuring Git's behaviour for particular files.
-* Versioning of artifacts.
-* Linting and code quality analysis.
-* Scanning for code vulnerabilities.
-* Running unit tests.
-* Assessing code coverage.
-* Indexing PDBs for debugging in a deployed environment.
-* Preparing to run integration tests on a deployed environment.
-* Preparing to deploy database schema migrations.
-* Generating a client for the API.
-
-There's always more to learn and do. **You don't need to do all of these to demonstrate your ability.** This list is a suggestion of ideas. You're welcome to do something else.
-
-Be kind to yourself, and enjoy the challenge. :heart:
+And DB related changes can be done in the migration scripts and recreate the image in pipeline.

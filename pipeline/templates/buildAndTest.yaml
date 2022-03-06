@@ -45,6 +45,11 @@ steps:
       codeCoverageTool: Cobertura
       summaryFileLocation: $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml
 
+  - task: PublishSymbols@2
+    displayName: "Publish symbols path"
+    inputs:
+      SymbolServerType: TeamServices
+
   - task: PublishBuildArtifacts@1
     displayName: "Publish Infra Template"
     inputs:
