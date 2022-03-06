@@ -62,6 +62,5 @@ stages:
           steps:
             - template: "templates/dockerImage.yaml"
               parameters:
-                buildConfiguration: $(buildConfiguration)
-                buildPlatform: $(buildPlatform)
-                GithubPackageRegistryToken: $(GithubPackageRegistryToken)
+                azureSubscription : $(azureSubscription)
+                azureContainerRegistry : $(azureContainerRegistry)
