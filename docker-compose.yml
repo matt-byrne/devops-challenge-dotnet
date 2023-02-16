@@ -1,6 +1,6 @@
 # Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
 
-version: '3.4'
+version: '3.8'
 
 services:
   devopschallengesalesapi:
@@ -13,14 +13,21 @@ services:
     depends_on:
       - devopschallengesalesdatabase
 
-  devopschallengesalesdatabase:
-    container_name: devopschallengesalesdatabase
+  db:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
       SA_PASSWORD: "Challenge2023@"
       ACCEPT_EULA: "Y"
     ports:
-      - 1433:1433
+    - "14331:1433"
+    depends_on: 
+      - migrations
 
-
+  devopschallengesalesdatabase:
+    image: devopschallengesalesdatabase
+    build:
+      context: .
+      dockerfile: src/DevOpsChallenge.SalesApi.Database/Dockerfile
+    ports:
+      - 1443:1443
 
