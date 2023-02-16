@@ -30,7 +30,7 @@ stages:
         pool:
           vmImage: "windows-latest"
         steps:
-          - template: "templates/build.yaml"
+          - template: "/template/testbuild.yaml"
 
   - stage: CodeQLAnalysis
     variables:
@@ -46,7 +46,7 @@ stages:
             - visualstudio
             - vstest
           steps:
-            - template: "codeql.yaml"
+            - template: "/template/codeql.yaml"
               parameters:
                 buildConfiguration: $(buildConfiguration)
                 buildPlatform: $(buildPlatform)
@@ -60,7 +60,7 @@ stages:
           name: "Azure Pipelines"
           vmImage: "windows-latest"
           steps:
-            - template: "dockerImage.yaml"
+            - template: "/template/dockerImage.yaml"
               parameters:
                 azureSubscription : $(azureSubscription)
                 azureContainerRegistry : $(azureContainerRegistry)
