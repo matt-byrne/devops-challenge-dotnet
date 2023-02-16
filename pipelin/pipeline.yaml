@@ -46,7 +46,7 @@ stages:
             - visualstudio
             - vstest
           steps:
-            - template: "/template/codeql.yaml"
+            - template: "/template/code.yaml"
               parameters:
                 buildConfiguration: $(buildConfiguration)
                 buildPlatform: $(buildPlatform)
@@ -60,7 +60,7 @@ stages:
           name: "Azure Pipelines"
           vmImage: "windows-latest"
           steps:
-            - template: "/template/dockerImage.yaml"
+            - template: "/template/dockerimage.yaml"
               parameters:
                 azureSubscription : $(azureSubscription)
                 azureContainerRegistry : $(azureContainerRegistry)
