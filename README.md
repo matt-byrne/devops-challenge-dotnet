@@ -9,9 +9,8 @@ This repository is used to build a containerized dotnet web application that con
  tests - Is the target for test case ran agains the code.
  scripts - Contains the migration script. 
  
-2) Pipeline - Takes care of the restore/build process of the codes, code checks, test cases processes and publishes as Azure container image.
- It uses dotnet build to build the project, unit testing is done, a report is published.
+2) Pipeline ( Azure pipeline) - Calls various YAML file from the template dir, it takes care of the complete restore/build process of the codes, code checks/scan are taken care by codeql, builds/publishes as Azure container image. 
  
 3) Docker build
  This project has 2 containers one for the api server and for sql server. Hence docker-compose file was used over dockerfile to create containers.
- ACR is used to store the image, migration script is used db related requirment before re-running the pipeline. 
+ ACR is used to store the image, migration script is used for db related requirment before re-running the pipeline. 
