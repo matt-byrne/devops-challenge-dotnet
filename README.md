@@ -1,9 +1,13 @@
 Read me provides a over view of what this project is about. 
 
+What is this repository for?
+This repository is used to build a containerized dotnet web application that connects to SQL database via Api call to provide business insights.
+
 1) Directory structure as follows:
  Src - Holds the source codes for the project
  pipleline - Holds build deployment templates
  tests - Is the target for test case ran agains the code.
+ scripts - Contains the migration script. 
  
 2) Pipeline - Takes care of the restore/build process of the codes, code checks, test cases processes and publishes as Azure container image.
  It uses dotnet build to build the project, unit testing is done, a report is published.
