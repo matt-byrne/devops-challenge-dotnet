@@ -1,0 +1,10 @@
+src/DevOpsChallenge.SalesApi/bin/
+src/DevOpsChallenge.SalesApi/obj/
+tests/DevOpsChallenge.SalesApi.Business.UnitTests/bin/
+tests/DevOpsChallenge.SalesApi.Business.UnitTests/obj/
+src/DevOpsChallenge.SalesApi.Business/bin/
+src/DevOpsChallenge.SalesApi.Business/obj/
+src/DevOpsChallenge.SalesApi.Database/bin/
+src/DevOpsChallenge.SalesApi.Database/obj/
+tests/DevOpsChallenge.SalesApi.IntegrationTests/bin/
+tests/DevOpsChallenge.SalesApi.IntegrationTests/obj/

@@ -1,0 +1,21 @@
+parameters:
+  - name: azureContainerRegistry
+    type: string
+
+  - name: azureSubscription
+    type: string
+
+steps:
+  - task: DockerCompose@0
+    displayName: "Build  Image"
+    inputs:
+      azureSubscription: "$(azureSubscription)"
+      azureContainerRegistry: $(azureContainerRegistry)
+      action: "Build services"
+
+  - task: DockerCompose@0
+    displayName: "Push  Image"
+    inputs:
+      azureSubscription: "$(azureSubscription)"
+      azureContainerRegistry: $(azureContainerRegistry)
+      action: "Push services"
