@@ -58,6 +58,6 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: test echo
-      run: echo "hello world"
+    - name: test echo to pass workflow test
+      run: echo "Hi Welcome to my .Net application"
       shell: bash  
